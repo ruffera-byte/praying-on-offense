@@ -156,7 +156,7 @@ function renderMap() {
     node.title = person.name;
     map.append(place(node, x, y));
     const connections = person.connections.split("\n").map(item => item.trim()).filter(Boolean);
-    const visible = connections.slice(0, shown.length === 1 ? 3 : shown.length > 4 ? 1 : 2);
+    const visible = connections.slice(0, 3);
     visible.forEach((label, i) => {
       const direction = angle + (i - (visible.length - 1) / 2) * .45;
       const leafX = shown.length === 1
@@ -168,7 +168,7 @@ function renderMap() {
       leaf.title = label;
       map.append(place(leaf, leafX, leafY));
     });
-    if (connections.length > visible.length) {
+    if (connections.length > visible.length || (shown.length > 1 && connections.length > 1)) {
       const item = element("li", person.name + "’s connections");
       const names = element("ul", "");
       connections.forEach(label => names.append(element("li", label)));
