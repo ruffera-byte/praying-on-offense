@@ -31,8 +31,19 @@
 <footer>This page saves to your browser. Using a different browser or device? <button class="help" id="help">See how to move your prayer map.</button></footer>
 <dialog id="editor"></dialog><dialog id="backup" aria-labelledby="backupTitle">
 <h2 id="backupTitle">Move or back up your prayer map</h2><p>Your map and notes are saved in the browser you’re using. Everyone who opens the site starts with their own map. Sharing the website link shares the tool. Your entries stay in your browser.</p>
-<ol><li>On your current browser, choose <strong>Export backup</strong> to download your prayer map.</li><li>Move the file to your other device if needed, then open this same website in the browser you want to use.</li><li>Choose <strong>Import backup</strong> and select the file. Importing replaces the entries in that browser.</li></ol>
-<p>Export a backup before clearing site data, which can erase your map. Private browsing may erase entries when you close it. Keep your backup somewhere private because it contains your notes.</p>
+<ol>
+<li>Open your saved prayer map and tap <strong>Export backup</strong>. Your backup is a file named <strong>prayer-map-YYYY-MM-DD.json</strong>.</li>
+<li>Keep the file where your new browser can find it. If you’re switching browsers on the same phone, use the same downloaded file. If you’re switching devices, move it with AirDrop, iCloud Drive, Google Drive, or another file-sharing method.</li>
+<li>Open Praying on Offense in the browser you want to use. Tap <strong>Export / Import → Import backup</strong>, choose the <strong>.json</strong> file, and confirm. The import replaces the map in that browser. Export its existing map first if you want to keep a copy.</li>
+</ol>
+<h3>Where to find the backup on your phone</h3>
+<ul>
+<li><strong>Safari on iPhone or iPad:</strong> In the file picker, tap <strong>Browse</strong> and look in <strong>iCloud Drive → Downloads</strong> or <strong>On My iPhone → Downloads</strong>, depending on your Safari download settings.</li>
+<li><strong>Chrome on iPhone or iPad:</strong> If Chrome offers a choice when downloading, save to <strong>Files</strong> and remember the folder. In the import picker, tap <strong>Browse</strong> and look in that folder. If Chrome shows a preview, use <strong>Share → Save to Files</strong> if offered.</li>
+<li><strong>Chrome on Android:</strong> In the file picker, look in <strong>Recent</strong> or <strong>Downloads</strong>. You can also find the backup in Chrome’s <strong>⋮ → Downloads</strong> menu.</li>
+<li><strong>Other browsers or a computer:</strong> Check the browser’s Downloads menu to find where it saved the file. In the import picker, browse to that folder or to the cloud folder where you moved it.</li>
+</ul>
+<p>If you don’t see the backup, search your device’s Files app for <strong>prayer-map</strong>. Keep the backup somewhere private because it contains your notes. Export a backup before clearing site data. Private browsing may erase entries when you close it.</p>
 <div class="row"><button id="export">Export backup</button><button id="import" class="secondary">Import backup</button><form method="dialog"><button class="plain">Close</button></form></div><input id="file" type="file" accept=".json,application/json" hidden style="display:none">
 </dialog><p id="status" role="status"></p><script>
 "use strict";
